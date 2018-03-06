@@ -17,17 +17,28 @@ var orm = {
         })
     },
 
-    updateOne: function() {
-
+    updateOne: function(table, objColVals, condition, cb) {
+        var queryString = `UPDATE ${table} SET ${objColVals} WHERE ${condition}`;
+        connection.query(queryString, function(err, result) {
+            if (err) throw err;
+            cb(result);
+        })
     }
 };
 
-orm.insertOne("burgers", ["burger_name", "devoured"], ["test2", false], function(result) {
-    console.log(result);
-});
-
+// Test works
 // orm.selectAll("burgers", function(result) {
 //     console.log(result)
+// });
+
+// Test works
+// orm.insertOne("burgers", ["burger_name", "devoured"], ["test2", false], function(result) {
+//     console.log(result);
+// });
+
+// Test works
+// orm.updateOne("burgers", "devoured = true", "id = 1", function(result) {
+//     console.log(result);
 // });
 
 module.exports = orm;
