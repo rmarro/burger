@@ -2,30 +2,30 @@
 
 <h2>Burgers ready to eat</h2>
 
-<ul>
+<div>
   {{#each burgers}}
     {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
+      {{> burgers/burger-block devour=true}}
     {{/unless}}
   {{/each}}
-</ul>
+</div>
 
 <h2>Burgers already devoured</h2>
 
-<ul>
+<div>
   {{#each burgers}}
     {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
+      {{> burgers/burger-block}}
     {{/if}}
   {{/each}}
-</ul>
+</div>
 
 <h2>Cook a burger</h2>
 <form class="create-form">
 
   <div class="form-group">
     <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+    <input type="text" id="newburgername" name="burger_name">
   </div>
 
   <button type="submit">Cook burger!</button>
