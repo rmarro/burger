@@ -10,3 +10,7 @@ body {
 .card {
     margin-bottom: 10px;
 }
+
+.bg-success, .bg-warning {
+    height: 463px;
+}
