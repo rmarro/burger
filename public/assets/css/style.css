@@ -4,11 +4,11 @@ body {
 
 .jumbotron {
     background-color: #ce4414;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .card {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .bg-success, .bg-warning {
